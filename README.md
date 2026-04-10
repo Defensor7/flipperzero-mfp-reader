@@ -6,12 +6,12 @@ ISO 14443-4A using only stock firmware APIs — no firmware modifications
 required.
 
 <p align="center">
-  <img src="app/screenshots/01_dump_scan.png" width="320" alt="Dump scan in progress"/>
+  <img src="app/.catalog/screenshots/1.png" width="320" alt="Dump scan in progress"/>
 </p>
 
 | | | |
 |---|---|---|
-| ![Card info](app/screenshots/02_card_info.png) | ![Hex view](app/screenshots/03_hex_view.png) | ![Emulate](app/screenshots/04_emulate.png) |
+| ![Card info](app/.catalog/screenshots/2.png) | ![Hex view](app/.catalog/screenshots/3.png) | ![Emulate](app/.catalog/screenshots/4.png) |
 | Card identification | Hex viewer | Live emulation |
 
 ## Features

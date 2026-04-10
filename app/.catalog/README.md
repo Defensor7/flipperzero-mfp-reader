@@ -5,7 +5,7 @@ A standalone application for reading, dumping and emulating **MIFARE Plus SL3** 
 ## Features
 
 - **Card identification** — UID, SAK, ATQA, ATS parsing, manufacturer decoding, BCC validation
-- **Full sector dump** — recovers both KeyA and KeyB for every sector using a bundled default dictionary plus any custom `.dic` files dropped on the SD card
+- **Full sector dump** — recovers both KeyA and KeyB for every sector using a bundled default dictionary plus any custom dictionary files dropped on the SD card
 - **Live visual progress** — sector activity grid that fills in real time as keys are found and blocks are read
 - **Hex viewer** — scrollable monospace dump of every block
 - **Save / Load** dumps with editable file names and a duplicate-name validator
@@ -29,9 +29,9 @@ To re-open a saved dump, use **Saved cards** from the main menu.
 
 ## Dictionaries
 
-The app loads `.dic` files from `/ext/apps_data/mfp_reader/`. On first launch it creates `mfp_default_keys.dic` with about 20 well-known factory and development AES keys, plus a `README.txt` explaining the format.
+The app loads dictionary files from the apps_data/mfp_reader folder on the SD card. On first launch it creates mfp_default_keys.dic with about 20 well-known factory and development AES keys, plus a README.txt explaining the format.
 
-To add your own keys, drop additional `.dic` files into the same folder. They appear in the picker on the next dump.
+To add your own keys, drop additional .dic files into the same folder. They appear in the picker on the next dump.
 
 ## Compatibility
 

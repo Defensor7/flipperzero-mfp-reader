@@ -70,8 +70,15 @@ bool mfp_scene_card_info_on_event(void* ctx, SceneManagerEvent event) {
         return true;
     }
     if(event.type == SceneManagerEventTypeBack) {
-        /* When opened from the post-detection preview flow, Read is
-         * in the back stack — skip it so we don't restart detection. */
+        /* If Actions is anywhere up the stack we got here through the
+         * post-dump menu — let the default back handler pop us back
+         * into Actions. */
+        if(scene_manager_has_previous_scene(app->scene_manager, MfpSceneActions)) {
+            return false;
+        }
+        /* Otherwise we're in the post-detection preview flow: Read is
+         * the immediate previous scene and would restart card detection
+         * on its on_enter, so jump straight back to Start. */
         if(scene_manager_has_previous_scene(app->scene_manager, MfpSceneRead)) {
             scene_manager_search_and_switch_to_previous_scene(
                 app->scene_manager, MfpSceneStart);

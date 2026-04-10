@@ -26,3 +26,7 @@ CLAUDE.md
 # embedded in mfp_app.c and auto-deployed on first launch).
 /mfp_default_keys.dic
 /mfp_test_keys.dic
+
+# Local working copy of the catalog manifest — the canonical version
+# lives in the flipper-application-catalog fork.
+/catalog-submission/
